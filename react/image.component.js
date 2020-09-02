@@ -1,10 +1,10 @@
 class Image extends React.Component {
     render() {
-        return React.createElement("div", {className: "test123"}, "ABC")
+        let html = e("div", null, "test");
+        let attributes = {className: "image", style: {
+            backgroundImage: "url(resources/images/forest.jpg)"
+        } 
+    };
+        return e("div",attributes, html);
     }
 }
-
-ReactDOM.render(
-    React.createElement(Image), 
-    document.querySelector(".image-container")
-    );
